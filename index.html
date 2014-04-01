@@ -2,9 +2,21 @@
 <html>
   <head>
     <meta charset='utf-8'>
+    <meta name='keywords' content='today'>
+    <meta name='description' content='The todayness of today'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Is it today?</title>
     <link rel='stylesheet' href='/styles.css'>
+    <script>
+      window.onload = function() {
+        var answer = document.getElementById("answer");
+        var now = new Date();
+        if (now.getMonth() + 1 === 4 && now.getDate() === 1) {
+          answer.innerHTML = "NO";
+          answer.className += " tilt";
+        }
+      }
+    </script>
   </head>
   <body>
     <div id='wrapper'>
